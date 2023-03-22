@@ -1,7 +1,9 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-import '../../product_1/provider/product1_provider.dart';
+import '../provider/product_provider.dart';
+// import 'package:flutter/material.dart';
 
 class tabbar_screen extends StatefulWidget {
   const tabbar_screen({Key? key}) : super(key: key);
@@ -12,12 +14,12 @@ class tabbar_screen extends StatefulWidget {
 
 class _tabbar_screenState extends State<tabbar_screen> {
 
-  p1_provider? p1False,p1True;
+  product1_provider? hf,ht;
   @override
   Widget build(BuildContext context) {
 
-    p1False = Provider.of<p1_provider>(context,listen: false);
-    p1True = Provider.of<p1_provider>(context,listen: true);
+    hf = Provider.of<product1_provider>(context,listen: false);
+    ht = Provider.of<product1_provider>(context,listen: true);
     return SafeArea(
         child: CupertinoTabScaffold(
           tabBar:  CupertinoTabBar(
@@ -30,7 +32,7 @@ class _tabbar_screenState extends State<tabbar_screen> {
           ),
           tabBuilder: (BuildContext context, int index) {
             return Center(
-              child: p1True!.Screens[index],
+              child: ht!.Screens[index],
             );
           },
         )

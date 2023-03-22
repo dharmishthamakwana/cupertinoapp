@@ -1,24 +1,30 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-import 'home/screen/product_1/provider/product1_provider.dart';
-import 'home/screen/product_1/view/product1_screen.dart';
-import 'home/screen/tab_bar/view/tabbar_screen.dart';
 
-void main() {
+import 'home/screen/product1/provider/product_provider.dart';
+import 'home/screen/product1/view/product2_screen.dart';
+import 'home/screen/product1/view/product_screen.dart';
+import 'home/screen/product1/view/sopping_screen.dart';
+import 'home/screen/product1/view/tab_barr_Screen.dart';
+
+void main()
+{
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => p1_provider(),
-        )
+        ChangeNotifierProvider(create: (context) => product1_provider(),)
       ],
       child: CupertinoApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: '/',
+        // initialRoute: '3',
         routes: {
           '/':(p0) => tabbar_screen(),
-          'p1': (p0) => product1_screen(),
+          '1':(p0) => product1_screen(),
+          '2':(p0) => product2_screen(),
+          '3':(p0) => shopping_screen(),
+
         },
       ),
     ),

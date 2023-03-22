@@ -1,16 +1,18 @@
 
 import 'package:flutter/cupertino.dart';
 
-import '../view/product1_screen.dart';
+import '../view/product2_screen.dart';
+import '../view/product_screen.dart';
+import '../view/sopping_screen.dart';
 
-class p1_provider extends ChangeNotifier
+class product1_provider extends ChangeNotifier
 {
   List images = [
     "assets/images/1i.jpg",
     "assets/images/2i.jpg",
     "assets/images/3i.jpg",
-    "assets/images/4i.webp",
-    "assets/images/5i.jpg",
+    "assets/images/4i.jpeg",
+    "assets/images/5i.jpeg",
     "assets/images/6i.jpg",
     "assets/images/7i.jpg",
   ];
@@ -22,7 +24,7 @@ class p1_provider extends ChangeNotifier
     "Strut earrings",
     "Varsity socks",
     "Weave keyring",
-    "Camera"
+    "Garden strand"
   ];
 
   List name2 = [
@@ -31,7 +33,7 @@ class p1_provider extends ChangeNotifier
     "Serf and purf shirt",
     "Sunshirt dress",
     "Chambray shirt",
-    "Blazer"
+
   ];
 
   List images2 = [
@@ -40,7 +42,6 @@ class p1_provider extends ChangeNotifier
     "assets/images/3j.jpg",
     "assets/images/4j.jpg",
     "assets/images/5j.jpg",
-    "assets/images/6j.jpg",
   ];
 
   DateTime time = DateTime(2023,16,10,15);
@@ -53,7 +54,7 @@ class p1_provider extends ChangeNotifier
 
   List Screens = [
     product1_screen(),
-    // product2_screen(),
-    // shopping_screen()
+    product2_screen(),
+    shopping_screen()
   ];
 }
