@@ -12,13 +12,13 @@ class product1_screen extends StatefulWidget {
 }
 
 class _product1_screenState extends State<product1_screen> {
-  product1_provider? hf;
-  product1_provider? ht;
+  product1_provider? product1providerfalse;
+  product1_provider? product1providertrue;
 
   @override
   Widget build(BuildContext context) {
-    hf = Provider.of<product1_provider>(context, listen: false);
-    ht = Provider.of<product1_provider>(context, listen: true);
+    product1providerfalse = Provider.of<product1_provider>(context, listen: false);
+    product1providertrue = Provider.of<product1_provider>(context, listen: true);
     return SafeArea(
       child: CupertinoPageScaffold(
         child: Column(
@@ -54,7 +54,7 @@ class _product1_screenState extends State<product1_screen> {
                           Container(
                             height: 70,
                             width: 70,
-                            child: Image.asset("${ht!.images[index]}",
+                            child: Image.asset("${product1providertrue!.images[index]}",
                                 fit: BoxFit.cover),
                           ),
                           SizedBox(
@@ -64,7 +64,7 @@ class _product1_screenState extends State<product1_screen> {
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("${ht!.name[index]}"),
+                              Text("${product1providertrue!.name[index]}"),
                               Text("\$ 120"),
                             ],
                           ),
